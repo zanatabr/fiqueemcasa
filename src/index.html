@@ -19,17 +19,17 @@
                 <main>
                     <p>O período de isolamento social não deve estar sendo nada fácil.</p>
             
-                    <p>Para amenizar um pouco do problema, disponibilizamos algumas ideias de <strong>jogos, brincadeiras, filmes, livros, cursos e dicas</strong> pra você e a sua família.</p>
+                    <p>Para amenizar um pouco do problema, disponibilizamos algumas sugestões de <strong>jogos, brincadeiras, filmes, livros, cursos e dicas</strong> pra você e a sua família.</p>
             
                     <p>
-                        Clique em ver ideias para ver as sugestões disponíveis, 
-                        e se possível contribua adicionando a sua ideia.
+                        Clique em ver sugestões para listar as sugestões disponíveis, 
+                        e se possível contribua sugerindo algo.
                     </p>
                 </main>
                 
                 <section id="buttons">
-                    <button>+ Adicionar ideia</button>
-                    <button class="fat">Ver ideias</button>
+                    <button>+ Contribua</button>
+                    <button class="fat">Ver sugestões</button>
                 </section>
 
                 <footer>
@@ -73,6 +73,45 @@
                 </div>
 
             </section>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal">
+            <div class="content">
+                <h1>Nova Sugestão</h1>
+
+                <form action="">
+
+                    <div class="input-wrapper">
+                        <label for="title">Título da Sugestão</label>
+                        <input type="text" name="title" />
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="category">Categoria</label>
+                        <input type="text" name="category" />
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="imagem">Link da imagem</label>
+                        <input type="url" name="imagem" />
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="description">Digite uma descrição para a sua sugestão</label>
+                        <textarea name="description" id="" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="link">Link da sugestão</label>
+                        <input type="url" name="link" />
+                    </div>
+
+                    <button>Salvar</button>
+
+                </form>
+
+            </div>
         </div>
 
         
