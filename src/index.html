@@ -3,9 +3,63 @@
     <head>
         <meta charset="UTF-8">
         <title>Fique em Casa</title>
+
+        <style>
+            body {
+                background: #e5e5e5;
+                color: #25282b;
+                text-align: center;
+            }
+
+            button {
+                color: #ff5e84;
+                border: none;
+                font-weight: bold;
+                background: none;
+            }
+
+            .fat {
+                color:white;
+                background: #ff5e84;
+            }
+
+            .hide {
+                display: none;
+            }
+
+
+        </style>
     </head>
 
     <body>
         <img src="img/logotipo.png" alt="Logotipo FiqueEmCasa">
+
+        <p>O período de isolamento social não deve estar sendo nada fácil.</p>
+
+        <p>Para amenizar um pouco do problema, disponibilizamos algumas ideias de <strong>jogos, brincadeiras, filmes, livros, cursos e dicas</strong> pra você e a sua família.</p>
+
+        <p>
+            Clique em ver ideias para ver as sugestões disponíveis, 
+            e se possível contribua adicionando a sua ideia.
+        </p>
+
+        <button>+ Adicionar ideia</button>
+        <button class="fat">Ver ideias</button>
+
+        <p id="footer">Faça a sua parte</p>
+
+        <script>
+            document
+                .querySelector("button.fat")
+                .addEventListener("click", function(){
+                    document
+                        .querySelector("#footer")
+                        .classList
+                        .toggle("hide")
+
+                })
+
+        </script>
+
     </body>
 </html>
