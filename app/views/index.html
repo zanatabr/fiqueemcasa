@@ -40,40 +40,21 @@
             </section>
 
             <section id="last-proposals">
-                <div class="proposal">
-                    <img src="https://image.flaticon.com/icons/svg/2877/2877881.svg" alt="Imagem de Curso de Programação" />
-                    <div class="content">
-                        <h3>Cursos de Programação</h3>
-                        <p>Estudo</p>
-                        <div class="description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quisquam sapiente mollitia sequi aliquam necessitatibus laudantium eum qui enim veritatis repellat nihil vitae natus ratione fuga laboriosam repellendus, nemo quos.
-                        </div>
-                        <a href="#">Ver a sugestão</a>
-                    </div>
-                </div>
-                <div class="proposal">
-                    <img src="https://image.flaticon.com/icons/svg/753/753024.svg" alt="Imagem de Exercícios Físicos" />
-                    <div class="content">
-                        <h3>Exercícios Físicos</h3>
-                        <p>Saúde</p>
-                        <div class="description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quisquam sapiente mollitia sequi aliquam necessitatibus laudantium eum qui enim veritatis repellat nihil vitae natus ratione fuga laboriosam repellendus, nemo quos.
-                        </div>
-                        <a href="#">Ver a sugestão</a>
-                    </div>
-                </div>
-                <div class="proposal">
-                    <img src="https://image.flaticon.com/icons/svg/1830/1830774.svg" alt="Imagem de Meditação" />
-                    <div class="content">
-                        <h3>Meditação</h3>
-                        <p>Saúde</p>
-                        <div class="description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quisquam sapiente mollitia sequi aliquam necessitatibus laudantium eum qui enim veritatis repellat nihil vitae natus ratione fuga laboriosam repellendus, nemo quos.
-                        </div>
-                        <a href="#">Ver a sugestão</a>
-                    </div>
-                </div>
 
+                {% for proposal in proposals %}
+
+                    <div class="proposal">
+                        <img src="{{proposal.img}}" alt="Imagem de {{proposal.title}}" />
+                        <div class="content">
+                            <h3>{{proposal.title}}</h3>
+                            <p>{{proposal.category}}</p>
+                            <div class="description">
+                                {{proposal.description}}
+                            </div>
+                            <a href="{{proposal.url}}" target="_blank">Ver a sugestão</a>
+                        </div>
+                    </div>
+                {% endfor %}
             </section>
         </div>
 
