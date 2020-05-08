@@ -1,8 +1,14 @@
+/* Global */
+
 body {
     background: #e5e5e5;
     color: #25282b;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
+}
+
+body.hideScroll {
+    overflow: hidden;
 }
 
 a {
@@ -21,8 +27,35 @@ p, .description {
     letter-spacing: 0.1px;
 }
 
+.button {
+    background: #ff5e84;
+    color:white;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 8px;
+    
+    font-size: 14px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16); /* ou #ff5E8432 */
+}
+
+.button:hover {
+    background-color: #0984e3;
+    text-decoration: none;
+}
+
+
+/* Padrão */
+
 #container {
-    width: 90%; /* caso a largura total seja menor que 980px */
+    width: 80%; /* caso a largura total seja menor que 980px */
     max-width: 980px;
 
     /* estratégia para centralizar o box */
@@ -38,7 +71,7 @@ p, .description {
 
 #intro {
     width: 300px;
-    margin-right: 20px;
+    margin-right: 64px;
 }
 
 main {
@@ -49,19 +82,23 @@ main {
 #buttons {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 32px;
 
+    margin-bottom: 32px;
 }
 
 button {
     background: none;
     color: #ff5e84;
+
     border: none;
+
     font-size: 14px;
     font-weight: bold;
     line-height: 18px;
     letter-spacing: 0.2px;
+
     cursor: pointer;
+
     outline: none;
 }
 
@@ -69,25 +106,14 @@ button:hover {
     text-decoration: underline;
 }
 
-button.fat {
-    background: #ff5e84;
-    color:white;
-    width: 150px;
-    height: 40px;
-    border-radius: 6px;
-    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16); /* ou #ff5E8432 */
-}
-
-button.fat:hover {
-    text-decoration: none;
-}
-
 footer {
     text-align: center;
+
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0.2px;
+
     color: #777;
 }
 
@@ -95,31 +121,35 @@ footer a {
     opacity: 0.7;
 }
 
-.idea {
+.proposal {
     display: flex;
+
     background-color: #FFF;
     box-shadow: 0 4px 16px -8px rgba(1,1,1,0.1);
     border-radius: 8px;
+
     padding: 32px;
+
     margin-bottom: 32px;
 }
 
-.idea img {
+.proposal img {
     width: 60px;
     height: 60px;
+
     margin-right: 32px;
 }
 
-.idea h3 {
+.proposal h3 {
     margin: 0;
 }
 
-.idea p {
+.proposal p {
     margin: 8px 0;
     color: #777;
 }
 
-.idea .description {
+.proposal .description {
     margin: 16px 0;
 
 }
@@ -132,17 +162,13 @@ footer a {
 
     position: absolute;
     top: 0;
-    /*
-    top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    */
-    
-    /* ou por view port */
+
+    /* ou por view port 
     width: 100vw;  
-    /* height: 100vh; */
-    height: max-content;
+    height: 100vh; */
 
     display: flex;
     justify-content: center;
@@ -150,13 +176,19 @@ footer a {
     transition: 400ms;
 }
 
+#modal.addScroll {
+    overflow: auto;
+}
+
 #modal .content {
-    margin-top: 128px;
+    margin-top: 5%;
+
     color:white;
 }
 
 #modal .content h1 {
     text-align: center;
+
     text-transform: uppercase;
 }
 
@@ -164,7 +196,7 @@ footer a {
     width: 80%;
     max-width: 800px;
 
-    margin: 0 auto;
+    margin: 0 auto 15%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -230,6 +262,7 @@ form a {
 form a:hover {
     background-color: #fff;
     color: #ff5e84;
+
     text-decoration: none;
 }
 
@@ -240,9 +273,13 @@ form button {
     height: 40px;
 
     border-radius: 6px;
+
     cursor: pointer;
+
     margin-top: 32px;
+
     grid-column: 2;
+
     justify-self: end;
 
     transition: 400ms;
@@ -258,4 +295,73 @@ form button:hover {
     /* display: none; */
     opacity: 0;
     visibility: hidden;
+}
+
+
+
+/* sugestões */
+
+#page-sugestions #container {
+    display: block;
+}
+
+#page-sugestions header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#page-sugestions nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-sugestions li {
+    list-style: none;
+
+    margin-right: 16px;
+}
+
+#page-sugestions li a {
+    color: #25282b;
+}
+
+#page-sugestions li a.button {
+    color: white;
+}
+
+#page-sugestions li:last-child {
+    margin: 0px;
+}
+
+
+section#title {
+    text-align: center;
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+section#proposals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+section#proposals .proposal {
+    margin: 0;
+}
+
+section#title,
+section#proposals,
+footer {
+    margin-top: 64px;
 }
