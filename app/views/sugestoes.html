@@ -1,40 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+{% extends "layout.html" %}
+
+{% set bodyId = "page-proposals" %}
+
+{% block title %}
     <title>Sugestões - Fique em Casa</title>
+{% endblock title %}
 
-    {% include "head.html" %}
-</head>
-<body id="page-proposals">
 
-    <div id="container">
-        <header>
-            <a href="/">
-                <img src="/img/logotipo.png" alt="Logotipo FiqueEmCasa">
-            </a>
-            <nav>
-                <li><a href="/">Início</a></li>
-                <li><a class="button" href="#" onclick="onOff()">Nova Sugestão</a></li>
-            </nav>
-        </header>
-        <section id="title">
-            <p>em exibição</p>
-            <h1>Sugestões</h1>
-        </section>
-        <main>
-            <section id="proposals">
-                {% include "section_proposals.html" %}
-            </section>
-        </main>
-        <footer>
-            A <a href="http://www.dfdx.com.br" target="_blank">DFDX</a> ajuda você a fazer a sua parte
-        </footer>    
-    </div>
-
-    <!-- Modal -->
-    {% include "modal.html" %}
-
-    <script src="/script.js"></script>    
-</body>
-</html>
+{% block content %}
+<header>
+    <a href="/">
+        <img src="/img/logotipo.png" alt="Logotipo FiqueEmCasa">
+    </a>
+    <nav>
+        <li><a href="/">Início</a></li>
+        <li><a class="button" href="#" onclick="onOff()">Nova Sugestão</a></li>
+    </nav>
+</header>
+<section id="title">
+    <p>em exibição</p>
+    <h1>Sugestões</h1>
+</section>
+<main>
+    <section id="proposals">
+        {% include "section_proposals.html" %}
+    </section>
+</main>
+<footer>
+    A <a href="http://www.dfdx.com.br" target="_blank">DFDX</a> ajuda você a fazer a sua parte
+</footer>    
+{% endblock %}

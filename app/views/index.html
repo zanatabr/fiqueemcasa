@@ -1,52 +1,37 @@
-<html>
+{% extends "layout.html" %}
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Fique em Casa</title>
+{% block content %}
 
-        {% include "head.html" %}
-    </head>
+<section id="intro">
+    <header>
+        <a href="/">
+            <img src="/img/logotipo.png" alt="Logotipo FiqueEmCasa">
+        </a>
+    </header>
 
-    <body>
+    <main>
+        <p>O período de isolamento social não deve estar sendo nada fácil.</p>
 
-        <div id="container">
-            <section id="intro">
-                <header>
-                    <a href="/">
-                        <img src="/img/logotipo.png" alt="Logotipo FiqueEmCasa">
-                    </a>
-                </header>
+        <p>Para amenizar um pouco do problema, disponibilizamos algumas sugestões de <strong>jogos, brincadeiras, filmes, livros, cursos e dicas</strong> pra você e a sua família.</p>
 
-                <main>
-                    <p>O período de isolamento social não deve estar sendo nada fácil.</p>
-            
-                    <p>Para amenizar um pouco do problema, disponibilizamos algumas sugestões de <strong>jogos, brincadeiras, filmes, livros, cursos e dicas</strong> pra você e a sua família.</p>
-            
-                    <p>
-                        Clique em ver sugestões para listar as sugestões disponíveis, 
-                        e se possível contribua sugerindo algo.
-                    </p>
-                </main>
-                
-                <section id="buttons">
-                    <button onclick="onOff()">+ Contribua</button>
-                    <a href="/proposals" class="button">Ver sugestões</a>
-                </section>
+        <p>
+            Clique em ver sugestões para listar as sugestões disponíveis, 
+            e se possível contribua sugerindo algo.
+        </p>
+    </main>
+    
+    <section id="buttons">
+        <button onclick="onOff()">+ Contribua</button>
+        <a href="/proposals" class="button">Ver sugestões</a>
+    </section>
 
-                <footer>
-                    A <a href="http://www.dfdx.com.br" target="_blank">DFDX</a> ajuda você a fazer a sua parte
-                </footer>
-            </section>
+    <footer>
+        A <a href="http://www.dfdx.com.br" target="_blank">DFDX</a> ajuda você a fazer a sua parte
+    </footer>
+</section>
 
-            <section id="last-proposals">
-                {% include "section_proposals.html" %}
-            </section>
-        </div>
+<section id="last-proposals">
+    {% include "section_proposals.html" %}
+</section>
 
-        <!-- Modal -->
-        {% include "modal.html" %}
-        
-        <script src="/script.js"></script>
-
-    </body>
-</html>
+{% endblock %}
