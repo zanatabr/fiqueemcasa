@@ -1,13 +1,13 @@
 {% for proposal in proposals %}
 <div class="proposal">
-    <img src="{{proposal.img}}" alt="Imagem de {{proposal.title}}" />
+    <img src="{{proposal.image}}" alt="Imagem de {{proposal.title}}" />
     <div class="content">
         <h3>{{proposal.title}}</h3>
         <p>{{proposal.category}}</p>
         <div class="description">
             {{proposal.description}}
         </div>
-        <a href="{{proposal.url}}" target="_blank">Ver a sugestão</a>
+        <a href="{{proposal.link}}" target="_blank">Ver a sugestão</a>
     </div>
 </div>
 {% endfor %}

@@ -2,6 +2,9 @@
 const express = require("express");
 const server = express();
 
+const db = require("./db");
+
+/*
 const proposals = [
     {
         img: "https://image.flaticon.com/icons/svg/2877/2877881.svg",
@@ -32,6 +35,7 @@ const proposals = [
         url:"http://www.dfdx.com.br"
     }
 ];
+*/
 
 // configurar arquivos estáticos (css, scripts, imagens)
 server.use(express.static("public"));
@@ -45,14 +49,29 @@ nunjucks.configure("views",{
 
 // criação da rota "/"
 server.get("/", function(req, res) {
-    //let lastProposals = proposals.slice(-2).reverse();
-    const lastProposals = [...proposals].slice(-2).reverse();
-    
-    return res.render("index.html", {proposals: lastProposals} );
+
+    db.all('SELECT * FROM proposals', function(err, rows) {
+        if (err) {
+            console.log(err);
+            return res.send("Erro no banco de dados");
+        }
+
+        const lastProposals = [...rows].slice(-2).reverse();
+        
+        return res.render("index.html", {proposals: lastProposals} );
+    });
+
 });
 
 server.get("/proposals", function(req, res) {
-    return res.render("sugestoes.html", {proposals: [...proposals].reverse()});
+    db.all('SELECT * FROM proposals', function(err, rows) {
+        if (err) {
+            console.log(err);
+            return res.send("Erro no banco de dados");
+        }
+        return res.render("sugestoes.html", {proposals: [...rows].reverse()});
+    });    
+    
 });
 
 // server ativo no port TCP 3000
