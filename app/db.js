@@ -15,32 +15,32 @@ db.serialize(function() {
         );
     `);
         
-    // Inserir dado na tabela
-    const query = `
-    INSERT INTO proposals (
-        image,
-        title,
-        category,
-        description,
-        link
-    ) VALUES (?,?,?,?,?);
-    `;
+    // // Inserir dado na tabela
+    // const query = `
+    // INSERT INTO proposals (
+    //     image,
+    //     title,
+    //     category,
+    //     description,
+    //     link
+    // ) VALUES (?,?,?,?,?);
+    // `;
 
-    const values = [
-        "https://image.flaticon.com/icons/svg/2877/2877881.svg",
-        "Cursos de Programação",
-        "Estudos",
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quisquam sapiente mollitia sequi aliquam necessitatibus laudantium eum qui enim veritatis...",
-        "http://www.dfdx.com.br"        
-    ];
-    /*
+    // const values = [
+    //     "https://image.flaticon.com/icons/svg/2877/2877881.svg",
+    //     "Cursos de Programação",
+    //     "Estudos",
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quisquam sapiente mollitia sequi aliquam necessitatibus laudantium eum qui enim veritatis...",
+    //     "http://www.dfdx.com.br"        
+    // ];
 
-    db.run(query, values, function(err) {
-        if (err) return console.log(err);
 
-        console.log(this);
-    });
-*/
+    // db.run(query, values, function(err) {
+    //     if (err) return console.log(err);
+
+    //     console.log(this);
+    // });
+
 
 
     // deletar dados da tabela
@@ -51,11 +51,11 @@ db.serialize(function() {
     // })
 
     // Consultar dados na tabela
-    db.all('SELECT * FROM proposals', function(err, rows) {
-        if (err) return console.log(err);
+    // db.all('SELECT * FROM proposals', function(err, rows) {
+    //     if (err) return console.log(err);
 
-        console.log(rows);
-    });
+    //     console.log(rows);
+    // });
 
 });
 
