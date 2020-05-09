@@ -43,23 +43,19 @@ db.serialize(function() {
 */
 
 
-/*
     // deletar dados da tabela
-    db.run('DELETE FROM proposals WHERE id = ?', [4], function(err) {
-        if (err) return console.log(err);
+    // db.run('DELETE FROM proposals WHERE id = ?', [5], function(err) {
+    //     if (err) return console.log(err);
 
-        console.log("REMOVIDO", this);
-    })
-*/
+    //     console.log("REMOVIDO", this);
+    // })
 
-/*
     // Consultar dados na tabela
     db.all('SELECT * FROM proposals', function(err, rows) {
         if (err) return console.log(err);
 
         console.log(rows);
     });
-*/
 
 });
 
