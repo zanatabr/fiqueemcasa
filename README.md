@@ -2,10 +2,6 @@
 
 > Projetinho rápido, feito para relembrar conceitos de html, css, js, layout, NodeJS, etc. 
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 Adaptação feita sobre o que foi apresentado por Mayk Brito (@maykbrito) da @RocketSeat, durante o WorkshopDev (https://www.youtube.com/watch?v=cprMYC8PCVY) que foi ao ar em março/2020, durante o período de isolamento social devido a Covid-19.
 
 ![](./meta-inf/app-home.png)
